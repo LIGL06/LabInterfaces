@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .row
+      .col.s12.m12.l8.offset-l2
+        .card.hoverable
+          .card-image
+            img(src='http://files.danielaguisao0.webnode.es/200000004-6047c61406/Tecnolog%C3%ADa.jpg')
+            span.card-title Lab. Interfaces
+          .card-content
+            p
+              | Sistema de huellas digitales para el Laboratorio de Interfaces.
+              br
+              | Alta y baja de alumnos de la carrera de #[b Ingeniería en Tecnologías de Información y Comunicación.] 
+          .card-action
+            a.indigo-text.darken-4(href='/auth/login') Login

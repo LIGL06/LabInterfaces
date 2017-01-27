@@ -1,0 +1,23 @@
+extends layout
+block content
+  .container
+    .row
+      .col.s12.m12.l8.offset-l2
+        .card.margin-top-15
+          .card-content
+            span.card-title Login de Administrador
+            p
+              | Ingresa tus credenciales de administrador, en caso que no seas administrador, contáctalo.
+              br
+              | Si tienes duda de quien es tu administrador contacta a #[a(href='mailto:leon.guevara@itesm.mx') #[b leon.guevara@itesm.mx]] 
+              .row.margin-top-5
+                form.col.s12(method='POST', action='/auth/login')
+                  .row
+                    .input-field.col.s6
+                      input#email.validate(type='email', name='email', required)
+                      label(for='email') correo@itesm.mx
+                    .input-field.col.s6
+                      input#password.validate(type='password', name='password', required)
+                      label(for='password') Password
+                    .input-field.col.s12
+                      input.white-text.darken-4.btn.indigo(type='submit')

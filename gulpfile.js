@@ -1,0 +1,10 @@
+var gulp = require('gulp')
+var sass = require('gulp-sass')
+var rename = require('gulp-rename')
+var minifycss = require('gulp-clean-css')
+gulp.task('styles', function(){
+  gulp.src('index.scss').pipe(sass())
+  .pipe(rename('app.css'))
+  .pipe(minifycss({compatibility:'ie8'}))
+  .pipe(gulp.dest('public/stylesheets'))
+})
